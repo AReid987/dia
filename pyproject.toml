@@ -1,12 +1,13 @@
 [project]
-name = "nari-tts"
+name = "dia"
 version = "0.1.0"
-description = "Dia - A text-to-speech model for dialogue generation"
+description = "Default template for PDM package"
 readme = "README.md"
-requires-python = ">=3.10"
-license = {file = "LICENSE"}
+requires-python = ">=3.12"
+license = {text = "MIT"}
 authors = [
-    {name = "Nari Labs", email = "contact@narilabs.ai"}
+    {name = "Nari Labs", email = "contact@narilabs.ai"},
+    {name = "Antonio Reid", email = "read.musik@gmail.com"},
 ]
 dependencies = [
     "descript-audio-codec>=1.0.0",
@@ -23,8 +24,8 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project.urls]
 "Homepage" = "https://github.com/nari-labs/dia"
@@ -59,6 +60,9 @@ name = "pytorch-cu126"
 url = "https://download.pytorch.org/whl/cu126"
 explicit = true
 
+
+[tool.pdm]
+distribution = true
 [dependency-groups]
 dev = [
     "ninja>=1.11.1.4",
